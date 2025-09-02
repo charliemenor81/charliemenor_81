@@ -1,1 +1,32 @@
-
+[
+    {
+        "title": "Avengers: Endgame",
+        "description": "After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore order to the universe.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2OTQ2NzM@._V1_SX300.jpg",
+        "videoLink": "https://www.youtube.com/embed/TcMBFSGVi1U"
+    },
+    {
+        "title": "The Shawshank Redemption",
+        "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2JiZS00NzMxLTk3OTQtM2NmNGQ5ZGRlNjE2XkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_SX300.jpg",
+        "videoLink": "https://www.youtube.com/embed/PLl99DlL6b4"
+    },
+    {
+        "title": "Inception",
+        "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTY5OTM0Mw@@._V1_SX300.jpg",
+        "videoLink": "https://www.youtube.com/embed/YoHD9XE0GXE"
+    },
+    {
+        "title": "Breaking Bad",
+        "description": "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BYmQ4YWMxNzUtOTk2NC00NmU0LWE3ODMtNzg5NzUyNmMxZjdlXkEyXkFqcGdeQXVyMTMzNDExNzMx._V1_SX300.jpg",
+        "videoLink": "https://www.youtube.com/embed/HhesaQXLuRY"
+    },
+    {
+        "title": "Stranger Things",
+        "description": "In the summer of 1985, in Hawkins, Indiana, strange things are happening. A secret Russian lab is discovered underneath the town, and a terrifying creature is unleashed.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMDZkZjRhNjctZGE3Yi00ZjAzLWIzOWQtYjljMzc5NGE4MDU4XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
+        "videoLink": "https://www.youtube.com/embed/mnd7zdFN8F0"
+    }
+]
