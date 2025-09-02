@@ -1,27 +1,33 @@
 document.addEventListener('DOMContentLoaded', function () {
     const searchBar = document.getElementById('searchBar');
     const movieGrid = document.getElementById('movieGrid');
+    const tvSeriesGrid = document.getElementById('tvSeriesGrid');
     const videoModal = document.getElementById('videoModal');
     const videoPlayer = document.getElementById('videoPlayer');
     const closeButton = document.querySelector('.close-button');
 
     let moviesData = [];
+    let tvSeriesData = [];
 
-    // Function to fetch movie data from JSON
-    async function fetchMovies() {
+    // Function to fetch data from JSON
+    async function fetchData() {
         try {
             const response = await fetch('data.json');
-            moviesData = await response.json();
-            displayMovies(moviesData);
+            const data = await response.json();
+            moviesData = data.movies;
+            tvSeriesData = data.tvSeries;
+            displayMovies(moviesData, movieGrid);
+            displayTVSeries(tvSeriesData, tvSeriesGrid);
         } catch (error) {
-            console.error('Error fetching movies:', error);
+            console.error('Error fetching data:', error);
             movieGrid.innerHTML = '<p>Failed to load movies.</p>';
+            tvSeriesGrid.innerHTML = '<p>Failed to load TV series.</p>';
         }
     }
 
     // Function to display movies in the grid
-    function displayMovies(movies) {
-        movieGrid.innerHTML = '';
+    function displayMovies(movies, grid) {
+        grid.innerHTML = '';
         movies.forEach(movie => {
             const movieItem = document.createElement('div');
             movieItem.classList.add('movie-item');
@@ -34,7 +40,26 @@ document.addEventListener('DOMContentLoaded', function () {
                     <a href="#" class="play-button" data-video="${movie.videoLink}">Play</a>
                 </div>
             `;
-            movieGrid.appendChild(movieItem);
+            grid.appendChild(movieItem);
+        });
+    }
+
+    // Function to display TV series in the grid
+    function displayTVSeries(tvSeries, grid) {
+        grid.innerHTML = '';
+        tvSeries.forEach(series => {
+            const seriesItem = document.createElement('div');
+            seriesItem.classList.add('movie-item');
+
+            seriesItem.innerHTML = `
+                <img src="${series.poster}" alt="${series.title}" class="movie-poster">
+                <div class="movie-details">
+                    <h2 class="movie-title">${series.title}</h2>
+                    <p class="movie-description">${series.description}</p>
+                    <a href="#" class="play-button" data-video="${series.videoLink}">Play</a>
+                </div>
+            `;
+            grid.appendChild(seriesItem);
         });
     }
 
@@ -51,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Event listener for the play button
-    movieGrid.addEventListener('click', function (event) {
+    document.getElementById('content').addEventListener('click', function (event) {
         if (event.target.classList.contains('play-button')) {
             event.preventDefault();
             const videoLink = event.target.getAttribute('data-video');
@@ -73,9 +98,11 @@ document.addEventListener('DOMContentLoaded', function () {
     searchBar.addEventListener('input', function () {
         const searchTerm = searchBar.value.toLowerCase();
         const filteredMovies = moviesData.filter(movie => movie.title.toLowerCase().includes(searchTerm));
-        displayMovies(filteredMovies);
+        const filteredTVSeries = tvSeriesData.filter(series => series.title.toLowerCase().includes(searchTerm));
+        displayMovies(filteredMovies, movieGrid);
+        displayTVSeries(filteredTVSeries, tvSeriesGrid);
     });
 
-    // Initial fetch of movies
-    fetchMovies();
+    // Initial fetch of data
+    fetchData();
 });
