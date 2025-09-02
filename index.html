@@ -3,70 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bflix - Watch Movies Online</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Movie & TV Series</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header class="header">
-        <div class="header-left">
-            <i class="fa-solid fa-bars menu-icon"></i>
-            <a href="#" class="logo">bflix</a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#" id="movies-btn" class="active">Movies</a></li>
-                    <li><a href="#" id="tv-series-btn">TV Series</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="search-container">
-            <i class="fa-solid fa-search search-icon"></i>
-            <input type="text" placeholder="Search...">
-        </div>
+    <header>
+        <h1>Movie & TV Series</h1>
+        <input type="text" id="searchBar" placeholder="Search by title...">
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">Eenie Meanie</h1>
-                <div class="hero-meta">
-                    <span class="rating"><i class="fa-solid fa-star"></i> 8.7</span>
-                    <span class="runtime">106 min</span>
-                    <span class="genre">Action, Comedy</span>
-                </div>
-                <p class="hero-description">
-                    A former teenage getaway driver gets pulled back into her criminal past when a heist goes wrong, offering her a chance to save the life of the person she loves.
-                </p>
-                <div class="hero-buttons">
-                    <button class="btn btn-primary"><i class="fa-solid fa-play"></i> Watch Now</button>
-                    <button class="btn btn-secondary"><i class="fa-solid fa-heart"></i> Favorite</button>
-                </div>
-            </div>
-             <div class="hero-carousel-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-        </section>
-
-        <section class="movie-list">
-            <div class="list-header">
-                <h2 id="list-title">Latest Movies</h2>
-                <a href="#" class="view-all">View all <i class="fa-solid fa-chevron-right"></i></a>
-            </div>
-            <div class="movie-grid" id="content-grid">
-                </div>
-        </section>
-
+    <main id="content">
+        <div class="grid" id="movieGrid">
+            <!-- Movie posters will be added here -->
+        </div>
     </main>
 
-    <script src="script.js"></script>
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="videoPlayer">
+                <!-- Video will be embedded here -->
+            </div>
+        </div>
+    </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
