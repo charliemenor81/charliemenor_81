@@ -1,10 +1,10 @@
 {
     "movies": [
         {
-            "title": "Avengers: Endgame",
+            "title": "F1",
             "description": "After the devastating events of Avengers: Infinity War, the universe is in ruins.",
-            "poster": "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2OTQ2NzM@._V1_SX300.jpg",
-            "videoLink": "https://www.youtube.com/embed/TcMBFSGVi1U"
+            "poster": "F1.jpg",
+            "videoLink": "https://vidfast.pro/movie/911430"
         },
         {
             "title": "The Shawshank Redemption",
